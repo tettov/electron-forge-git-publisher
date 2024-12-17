@@ -1,0 +1,36 @@
+{
+    "name": "electron-forge-git-publisher",
+    "version": "1.0.1",
+    "author": "Ivan Serbin",
+    "description": "Git repository publisher for Electron Forge",
+    "homepage": "https://github.com/tettov/electron-forge-git-publisher",
+    "license": "MIT",
+    "keywords": [
+        "electron",
+        "forge",
+        "publisher",
+        "git",
+        "repository"
+    ],
+    "files": [
+        "./build",
+        "./src"
+    ],
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
+    "dependencies": {
+        "@electron-forge/publisher-base": "*",
+        "simple-git": "3.27.0"
+    },
+    "devDependencies": {
+        "@tsconfig/node22": "22.0.0",
+        "@types/node": "22.10.2",
+        "rimraf": "6.0.1",
+        "typescript": "5.7.2"
+    },
+    "scripts": {
+        "clean": "rimraf ./build",
+        "prebuild": "npm run clean",
+        "build": "tsc"
+    }
+}
